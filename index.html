@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.3.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2025.3.1/core.js"></script>
+
+    <title>Q2 SKILLSTEST 🧪</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        *{
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body{
+            background: linear-gradient(
+                135deg,
+                #1b4332,
+                #2d6a4f,
+                #40916c,
+                #74c69d
+            );
+            text-align: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container{
+            max-width: 700px;
+            margin: 80px auto;
+            padding: 30px;
+            background: rgba(255,255,255,0.97);
+            border-radius: 20px;
+            border: none;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        h1{
+            color: #1b4332;
+            font-weight: 700;
+        }
+
+        p{
+            color: #555;
+        }
+
+        .result{
+            margin-top: 20px;
+            padding: 20px;
+            background: #f8fff8;
+            border-left: 6px solid #2d6a4f;
+            border-radius: 12px;
+            text-align: left;
+        }
+
+        .element-info p{
+            margin: 8px 0;
+        }
+
+        input[type="text"]{
+            width: min(100%, 500px);
+            height: 45px;
+            display: block;
+            margin: auto;
+            padding: 10px;
+            border-radius: 10px;
+            border: 2px solid #95d5b2;
+            box-sizing: border-box;
+            font-size: 15px;
+        }
+
+        input[type="text"]:focus{
+            outline: none;
+            border-color: #2d6a4f;
+            box-shadow: 0 0 10px rgba(45,106,79,0.3);
+        }
+
+        button{
+            margin-top: 10px;
+            padding: 12px 30px;
+            background: #2d6a4f;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        button:hover{
+            background: #1b4332;
+            transform: translateY(-2px);
+        }
+
+        h3{
+            color: #1b4332;
+        }
+
+        span{
+            color: #2d6a4f;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Non-Metal Element Information</h1>
+
+    <p>
+        Enter a non-metal element name to search
+    </p>
+
+    <input
+        type="text"
+        id="element1"
+        placeholder="Enter an element name IN ALL CAPS">
+
+    <button py-click="search_element">
+        Search Element
+    </button>
+
+    <div class="result">
+
+        <h3>Results</h3>
+
+        <div class="element-info">
+
+            <p>
+                <b>Element Symbol:</b>
+                <span id="code"></span>
+            </p>
+
+            <p>
+                <b>Element Name:</b>
+                <span id="name"></span>
+            </p>
+
+            <p>
+                <b>Atomic Number:</b>
+                <span id="atomic_#"></span>
+            </p>
+
+            <p>
+                <b>Atomic Mass:</b>
+                <span id="atomic_m"></span>
+            </p>
+
+        </div>
+
+    </div>
+
+    <script type="py" src="main.py"></script>
+
+</div>
+
+</body>
+</html>
